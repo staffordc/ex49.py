@@ -12,6 +12,7 @@ def scan(words):
 
     splitwords = words.split()
 
+    # loops through words and returns the set name with the word that was input
     for word in splitwords:
         if word in directions:
             results.append(('direction', word))
@@ -28,6 +29,8 @@ def scan(words):
             results.append(('error', word))
     return results
 
+# converts string inputs to int
+
 
 def convert_numbers(s):
     try:
@@ -35,14 +38,11 @@ def convert_numbers(s):
     except ValueError:
         return None
 
+# converts uppercase inputs to lowercase
+
 
 def convert_lower(a):
     try:
         return a.lower()
     except ValueError:
         return None
-
-    # def go_direction():
-    # once the direction is recieved we can have them go to the room in that direction
-
-    # def stop
